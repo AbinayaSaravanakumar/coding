@@ -1,0 +1,268 @@
+// 1.Remove duplicates in java code and print the remaining element in an array as it is
+
+import java.util.*;
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) 
+    {
+        Scanner sc=new Scanner(System.in);
+        int a[]=new int[10];
+        int b[]=new int[10];
+        int n;
+        System.out.print("Enter a length of an array");
+        n=sc.nextInt();
+        for(int i=0;i<n;i++)
+          a[i]=sc.nextInt();
+        for(int i=0;i<n;i++)
+          System.out.print(a[i]+" ");
+         int f=0;
+         for(int i=0;i<n;i++)
+             {
+               f=0;
+              for(int j=i+1;j<n;j++)
+                {
+                 if(a[i] == a[j])
+                   {
+                      f=1;
+                    }
+                 }
+              if(f==1)
+               continue;
+              System.out.print(" "+a[i]);
+                
+              }           
+        
+    }
+}
+
+//2. java program to check whether the entered number is palindrome or not
+import java.util.*;
+import java.util.Scanner;
+class Main
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int n,rev=0,rem,temp;
+        System.out.print("Enter a number;");
+        n=sc.nextInt();
+        temp=n;
+        while(temp>0)
+        {
+           rem=temp%10;
+           rev=rev*10+rem;
+           temp=temp/10;
+           
+        }
+        if(temp==n)
+        System.out.print("Entered number "+rev+"is a palindrome");
+        else
+         System.out.print("Entered number "+rev+"is not a palindrome");
+    }
+}
+//3.sum of two numbers in python
+
+a=int(input("enter a number 1:"))
+b=int(input("enter a number 2 "))
+s=a+b;
+print("sum of a given number is : ",s)
+
+//4.factorial of a given number in python
+
+n=int(input("Enter a number to find factorial"))
+s=1
+for i in range(1,n+1):
+    s=s*i
+    
+print("Factorial of a given number:",s)
+
+//5.Write a Python program to Count Vowels in a String
+
+
+s=input("enter a string")
+c=0
+for i in s:
+    if(i=='a' or i=='e'or i=='i'or i=='o'or i=='u'or i=='A'or i=='E'or i=='I'or i=='O'or i=='U'):
+        c=c+1
+        
+print(c)
+
+//6.Write a Python program to find Fibonacci Sequence
+
+s=int(input("enter a number"))
+a=0
+b=1
+print(a," ",b)
+for i in range(s):
+    c=a+b
+    print(c)
+    a=b
+    b=c
+
+//7.java program to check whether the given number is armstrong or not
+
+import java.util.*;
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) 
+    {
+        Scanner sc = new Scanner(System.in);
+        int n,rem,rev=0,j=1;
+        
+        System.out.print("enter a number");
+        n=sc.nextInt();
+        int a=n;
+        String s=Integer.toString(a);
+       // System.out.print(s);
+        int l=s.length();
+        while(a>0)
+        {
+            rem=a%10;
+            for(int i=1;i<=l;i++)
+              j=j*rem;
+            rev=rev +j;
+            a=a/10;
+            j=1;
+        }
+    if( rev==n)    
+       System.out.print("It is an armstrong number"); 
+    else
+     System.out.print("It is not an armstrong number");
+
+    }
+}
+
+//8.check whether the given two strings are anagram or not
+
+s1=input('Enter an string1')
+s2=input('Enter an string2')
+s4=s1.replace(" ","").lower()
+s3=s2.replace(" ","").lower()
+s5=sorted(s4)
+s6=sorted(s3)
+if(s5==s6):
+    print("it is a anagram")
+else:
+    print("it is not a anagram")
+
+//9.write a java program to check whether the given number is perfect or not
+
+import java.util.*;
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) 
+    {
+        Scanner sc = new Scanner(System.in);
+        int n=sc.nextInt();
+        int s=0;
+        for(int i=1;i<n;i++)
+        {
+            if(n%i==0)
+              s=s+i;
+        }
+        if(s==n)
+        System.out.print("Given number is perfect number");
+        else
+        System.out.print("given number is not a perfect number");
+    }
+}
+
+//10.Write a Python program to Find Second Largest Element in a List.
+
+list=[1,5,8,2,6,0,7]
+list.sort()
+print(list[-2])
+
+
+//11.Write a Python program to Find Second smallest Element in a List.
+
+list=[1,5,8,2,6,0,7]
+list.sort()
+print(list[-2])
+
+//12. Write a Python program to convert celcius to fahrenheit
+
+celsius = float(input("Enter temperature in celsius: "))
+
+fahrenheit = (celsius * 1.8) + 32
+
+print(celsius + " degree Celsius is equal to " + fahrenheit +" degree Fahrenheit.")
+
+
+//13.python program to check whwther the given number is prime number or not
+
+import math
+n=int(input("Enter a number:"))
+if n<=1:
+    print(False)
+else:
+    is_prime=True
+    for i in range(2,int(math.sqrt(n))+1):
+        if n % i==0:
+            is_prime = False
+            break
+    print(is_prime)
+
+//14.python program for swap two numbers
+
+a=int(input("enter the first number:"))
+b=int(input("enter the second number:"))
+
+temp=a
+a=b
+b=temp
+
+print("After the swapping the vale of a and b is:",a,b)
+
+
+//15.check whwther the letter in the string is consonant or vowel
+
+ch=input("enter a character:")
+if(ch=='a' or ch=='e' or ch=='i' or ch=='o' or ch=='u' or ch=='A' or ch=='E' or ch=='I' or ch=='O' or ch=='U')
+  print("The character is vowel")
+
+else:
+
+  Print ("The given character is consonant")
+//16. pattern
+public class main{
+public static void main(String[] args) {
+int rows = 5;
+for (int i=1;i<=rows;++i) 
+{
+
+ for (int j=1;j<=i;++j) {
+
+ System.out.print("j ");
+
+ }
+
+ System.out.println();
+
+ }
+
+ }
+
+}
+
+//17. pattern
+public class main{
+public static void main(String[] args) {
+int rows = 5;
+for (int i=1;i<=rows;++i) 
+{
+
+ for (int j=1;j<=i;++j) {
+
+ System.out.print("j ");
+
+ }
+
+ System.out.println();
+
+ }
+
+ }
+
+}
+
